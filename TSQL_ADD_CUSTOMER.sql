@@ -20,7 +20,7 @@ BEGIN
 
     END TRY
     BEGIN CATCH
-        if ERROR_NUMBER() = 2627 
+        IF ERROR_NUMBER() = 2627 
             THROW 50010, 'Duplicate customer ID', 1
         ELSE IF ERROR_NUMBER() = 50020
             THROW
